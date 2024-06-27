@@ -1,8 +1,24 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, Button } from "react-native";
 import { CaretLeft, DotsThree } from "phosphor-react-native";
-import HeaderBackButton from "@/assets/images/headerBackButton.png"
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import
+
+const VamoVer = 60000
+
+// function TimeCount() {
+
+//   'WaitTime'
+    
+// }
+function TimeView() {
+
+  return <Text style={{fontSize:50, textAlign:'center',color:'white', paddingVertical:'37.5%'}}>00:00</Text>
+
+}
+
 
 export default function Index() {
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -11,7 +27,7 @@ export default function Index() {
 //            backgroundColor:'gray',  
             borderRadius: 20
             }}>
-            <CaretLeft size={40} weight='bold' color='white' />
+           <CaretLeft size={40} weight='bold' color='white' />
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
@@ -23,13 +39,29 @@ export default function Index() {
         </TouchableOpacity>
       </View>
       <Text style={styles.headerText}>ExerciseName</Text>
-      <View style={{height:'75%', backgroundColor:'purple', borderRadius: 20000}}/>
+      <View style={{height:'70%', justifyContent:'center', alignItems:'center'}}>
+      <AnimatedCircularProgress
+      size={300}
+      width={10}
+      backgroundWidth={2.5}
+      rotation={0}
+      duration={VamoVer}
+      prefill={100}
+      fill={0}
+      tintColor="purple"
+      backgroundColor="purple"
+      lineCap='round'
+      renderCap={() => TimeView()}
+      >
+      </AnimatedCircularProgress>
+      </View>
+      <View style={{/*height:'75%', backgroundColor:'purple', borderRadius: 20000*/}}/>
       <View style={{paddingTop: 10, flexDirection:'row', justifyContent:'center', }}>
             <Button title="Start" color={'purple'}/>
             <View style={{padding:5}}/>
             <Button title="Next" color={'purple'}/>
       </View>
-    </View>
+    </View> 
   );
 }
 
