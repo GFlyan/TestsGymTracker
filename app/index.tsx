@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, Button } from "react-native";
 import { CaretLeft, DotsThree } from "phosphor-react-native";
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import
+import { useState } from "react";
 
-const VamoVer = 60000
+const WaitTime = 60000
 
 // function TimeCount() {
 
@@ -45,13 +45,13 @@ export default function Index() {
       width={10}
       backgroundWidth={2.5}
       rotation={0}
-      duration={VamoVer}
+      duration={WaitTime}
       prefill={100}
       fill={0}
       tintColor="purple"
       backgroundColor="purple"
       lineCap='round'
-      renderCap={() => TimeView()}
+//      renderCap={(item) => TimeView()}
       >
       </AnimatedCircularProgress>
       </View>
