@@ -64,12 +64,20 @@ export default function Index() {
       width={10}
       backgroundWidth={2.5}
       rotation={0}
+<<<<<<< HEAD
       duration={timeLeft}
+=======
+      duration={WaitTime}
+>>>>>>> 562033c13e09cf0000a82fd840a332e6acf498c4
       prefill={100}
       fill={fill}
       tintColor="purple"
       backgroundColor="purple"
       lineCap='round'
+<<<<<<< HEAD
+=======
+//      renderCap={(item) => TimeView()}
+>>>>>>> 562033c13e09cf0000a82fd840a332e6acf498c4
       >
         {TimeView}
       </AnimatedCircularProgress>
